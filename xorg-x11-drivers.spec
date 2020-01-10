@@ -1,7 +1,7 @@
 Summary: X.Org X11 driver installation package
 Name: xorg-x11-drivers
 Version: 7.3
-Release: 13.2%{?dist}
+Release: 13.3%{?dist}
 License: MIT
 Group: User Interface/X Hardware Support
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -59,6 +59,7 @@ Requires: xorg-x11-drv-v4l
 Requires: xorg-x11-drv-vesa
 Requires: xorg-x11-drv-void
 Requires: xorg-x11-drv-voodoo
+Requires: xorg-x11-drv-xgi
 
 # This _should_ be all arches, but sweet zombie jesus the buildsystem is
 # a disaster.  FIXME please.
@@ -133,6 +134,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 
 %changelog
+* Thu Mar 17 2011 Adam Jackson <ajax@redhat.com> 7.3-13.3
+- Add xgi driver
+
 * Tue Feb 9 2010 Soren Sandmann <sandmann@redhat.com> - 7.3-13.2
 - Add QXL driver
 

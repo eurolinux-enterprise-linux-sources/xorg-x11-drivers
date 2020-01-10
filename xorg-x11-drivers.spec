@@ -1,7 +1,7 @@
 Summary: X.Org X11 driver installation package
 Name: xorg-x11-drivers
 Version: 7.3
-Release: 13.3%{?dist}
+Release: 13.4%{?dist}
 License: MIT
 Group: User Interface/X Hardware Support
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -42,6 +42,7 @@ Requires: xorg-x11-drv-keyboard
 Requires: xorg-x11-drv-mach64
 Requires: xorg-x11-drv-mga
 Requires: xorg-x11-drv-mouse
+Requires: xorg-x11-drv-modesetting
 Requires: xorg-x11-drv-mutouch
 Requires: xorg-x11-drv-nouveau
 Requires: xorg-x11-drv-nv
@@ -134,6 +135,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 
 %changelog
+* Wed Sep 12 2012 Adam Jackson <ajax@redhat.com> 7.3-13.4
+- Add modesetting driver
+  Resolves: #835285
+
 * Thu Mar 17 2011 Adam Jackson <ajax@redhat.com> 7.3-13.3
 - Add xgi driver
 

@@ -1,7 +1,7 @@
 Summary: X.Org X11 driver installation package
 Name: xorg-x11-drivers
 Version: 7.7
-Release: 5%{?dist}
+Release: 6%{?dist}
 License: MIT
 Group: User Interface/X Hardware Support
 
@@ -121,6 +121,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 7.7-6
+- Mass rebuild 2013-12-27
+
 * Fri May 10 2013 Adam Jackson <ajax@redhat.com> 7.7-5
 - Drop ast, handled by -modesetting now
 
